@@ -31,4 +31,11 @@ object task1 {
     }
     return fib_tail(n, 0 , 1)
   }
+
+  // d) The difference between Int and BigInt 
+  // is the amount of memory allocated to the
+  // number, or in other words, how big of a
+  // number one can have before experiencing
+  // an intiger overflow. Int has 32 bits of 
+  // memory allocated, while BigInt has 64 bits.
 }
