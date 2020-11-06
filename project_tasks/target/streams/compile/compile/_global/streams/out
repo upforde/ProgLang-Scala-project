@@ -1,0 +1,6 @@
+[0m[[0m[31merror[0m] [0m[0m/home/danilas/Documents/Schoolwork/NTNU/ProgLang/ProgLang-Scala-project/project_tasks/src/main/scala/Transaction.scala:20:70: type mismatch;[0m[0J
+[0m[[0m[31merror[0m] [0m[0m found   : t.type (with underlying type Transaction)[0m[0J
+[0m[[0m[31merror[0m] [0m[0m required: Nothing[0m[0J
+[0m[[0m[31merror[0m] [0m[0m    def push(t: Transaction): Unit = this.synchronized{queue.enqueue(t)}[0m[0J
+[0m[[0m[31merror[0m] [0m[0m                                                                     ^[0m[0J
+[0m[[0m[31merror[0m] [0m[0mone error found[0m[0J
