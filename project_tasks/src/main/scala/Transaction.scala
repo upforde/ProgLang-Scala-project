@@ -52,7 +52,5 @@ class Transaction(val transactionsQueue: TransactionQueue,
           Thread.sleep(50) // you might want this to make more room for
                            // new transactions to be added to the queue
       }
-
-
     }
 }
