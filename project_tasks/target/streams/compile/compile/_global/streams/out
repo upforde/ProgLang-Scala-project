@@ -1,6 +1,10 @@
-[0m[[0m[31merror[0m] [0m[0m/home/danilas/Documents/Schoolwork/NTNU/ProgLang/ProgLang-Scala-project/project_tasks/src/main/scala/Transaction.scala:20:70: type mismatch;[0m[0J
-[0m[[0m[31merror[0m] [0m[0m found   : t.type (with underlying type Transaction)[0m[0J
-[0m[[0m[31merror[0m] [0m[0m required: Nothing[0m[0J
-[0m[[0m[31merror[0m] [0m[0m    def push(t: Transaction): Unit = this.synchronized{queue.enqueue(t)}[0m[0J
-[0m[[0m[31merror[0m] [0m[0m                                                                     ^[0m[0J
-[0m[[0m[31merror[0m] [0m[0mone error found[0m[0J
+[0m[[0m[31merror[0m] [0m[0m/home/danilas/Documents/Schoolwork/NTNU/ProgLang/ProgLang-Scala-project/project_tasks/src/main/scala/Bank.scala:9:9: not found: value transactionQueue[0m[0J
+[0m[[0m[31merror[0m] [0m[0m        transactionQueue.push(new Transaction(transactionsQueue, processedTransactions, from, to, amount, allowedAttempts))[0m[0J
+[0m[[0m[31merror[0m] [0m[0m        ^[0m[0J
+[0m[[0m[31merror[0m] [0m[0m/home/danilas/Documents/Schoolwork/NTNU/ProgLang/ProgLang-Scala-project/project_tasks/src/main/scala/Bank.scala:11:9: not found: value t[0m[0J
+[0m[[0m[31merror[0m] [0m[0m        t = new Thread{override def run() = processTransactions}[0m[0J
+[0m[[0m[31merror[0m] [0m[0m        ^[0m[0J
+[0m[[0m[31merror[0m] [0m[0m/home/danilas/Documents/Schoolwork/NTNU/ProgLang/ProgLang-Scala-project/project_tasks/src/main/scala/Bank.scala:12:9: not found: value t[0m[0J
+[0m[[0m[31merror[0m] [0m[0m        t.start[0m[0J
+[0m[[0m[31merror[0m] [0m[0m        ^[0m[0J
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m[0J
