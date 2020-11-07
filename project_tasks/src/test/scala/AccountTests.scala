@@ -14,7 +14,7 @@ class AccountTests extends FunSuite {
 
   test("Test 02: Invalid account withdrawal should throw exception") {
     val acc    = new Account(bank, 500)
-	val result = acc.withdraw(750)
+	  val result = acc.withdraw(750)
     assert(acc.getBalanceAmount == 500)
     assert(result.isRight)
   }
@@ -68,13 +68,9 @@ class AccountTests extends FunSuite {
     fourth.join()
     assert(acc.getBalanceAmount == 54500)
   }
-
-
 }
 
 class AccountTransferTests extends FunSuite {
-
-
   test("Test 07: Valid transfer between accounts") {
     val bank = new Bank()
 
@@ -107,7 +103,6 @@ class AccountTransferTests extends FunSuite {
     assert((acc1.getBalanceAmount == 500) && (acc2.getBalanceAmount == 1000))
   }
 
-
   test("Test 09: Invalid transfer between accounts due to insufficient funds should lead to transaction status FAILED and no money should be transferred between accounts") {
     val bank = new Bank()
     val acc1 = new Account(bank, 100)
@@ -121,9 +116,7 @@ class AccountTransferTests extends FunSuite {
 
     assert(bank.getProcessedTransactionsAsList.last.status == TransactionStatus.FAILED)
     assert((acc1.getBalanceAmount == 100) && (acc2.getBalanceAmount == 1000))
-
   }
-
 
   test("Test 10: Correct balance amounts after several transfers") {
     val bank = new Bank()
@@ -148,7 +141,6 @@ class AccountTransferTests extends FunSuite {
     }
 
     assert((acc1.getBalanceAmount == 2300) && (acc2.getBalanceAmount == 5700))
-
   }
 
   test("Test 11: Failed transactions should retry and potentially succeed with multiple allowed attempts") {
@@ -172,7 +164,6 @@ class AccountTransferTests extends FunSuite {
         && acc3.getBalanceAmount == 0)) failed += 1
     }
     assert(failed <= 5)
-
   }
 
   test("Test 12: Some transactions should be stopped with only one allowed attempt") {
@@ -195,5 +186,4 @@ class AccountTransferTests extends FunSuite {
     }
     assert(failed <= 5)
   }
-
 }

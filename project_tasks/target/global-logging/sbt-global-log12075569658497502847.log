@@ -68,3 +68,5 @@
 [0m[[0m[31merror[0m] [0m[0m(scalaCompilerBridgeScope / [31mcsrConfiguration[0m) insecure protocol is unsupported[0m[0J
 [0m[[0m[31merror[0m] [0m[0mTotal time: 0 s, completed Nov 6, 2020, 4:20:12 PM[0m[0J
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m[0J
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m[0J

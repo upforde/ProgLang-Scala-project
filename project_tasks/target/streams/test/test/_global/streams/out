@@ -1,5 +1,5 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AccountTests, org.scalatest.tools.Framework$$anon$1@40a59276, false, [SuiteSelector])[0m[0J
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AccountTransferTests, org.scalatest.tools.Framework$$anon$1@40a59276, false, [SuiteSelector])[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AccountTransferTests, org.scalatest.tools.Framework$$anon$1@4f91d75, false, [SuiteSelector])[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AccountTests, org.scalatest.tools.Framework$$anon$1@4f91d75, false, [SuiteSelector])[0m[0J
 [0m[[0m[0minfo[0m] [0m[0m[32mAccountTests:[0m[0m[0J
 [0m[[0m[0minfo[0m] [0m[0m[32m- Test 01: Valid account withdrawal[0m[0m[0J
 [0m[[0m[0minfo[0m] [0m[0m[32m- Test 02: Invalid account withdrawal should throw exception[0m[0m[0J
