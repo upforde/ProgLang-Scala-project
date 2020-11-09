@@ -2,7 +2,6 @@ import org.scalatest.FunSuite
 import exceptions._
 
 class AccountTests extends FunSuite {
-
   val bank = new Bank()
 
   test("Test 01: Valid account withdrawal") {
@@ -77,7 +76,7 @@ class AccountTransferTests extends FunSuite {
     val acc1 = bank.addAccount(100)
     val acc2 = bank.addAccount(200)
 
-    acc1 transferTo(acc2, 50)
+    acc1.transferTo(acc2, 50)
 
     while (bank.getProcessedTransactionsAsList.size != 1) {
       Thread.sleep(100)
@@ -93,7 +92,7 @@ class AccountTransferTests extends FunSuite {
     val acc1 = bank.addAccount(500)
     val acc2 = bank.addAccount(1000)
 
-    acc1 transferTo(acc2, -100)
+    acc1.transferTo(acc2, -100)
 
     while (bank.getProcessedTransactionsAsList.size != 1) {
       Thread.sleep(100)
@@ -108,7 +107,7 @@ class AccountTransferTests extends FunSuite {
     val acc1 = new Account(bank, 100)
     val acc2 = new Account(bank, 1000)
 
-    acc1 transferTo(acc2, 150)
+    acc1.transferTo(acc2, 150)
 
     while (bank.getProcessedTransactionsAsList.size != 1) {
       Thread.sleep(100)
@@ -125,12 +124,12 @@ class AccountTransferTests extends FunSuite {
     val acc2 = new Account(bank, 5000)
     val first = Main.thread {
       for (i <- 0 until 100) {
-        bank addTransactionToQueue(acc1, acc2, 30)
+        bank.addTransactionToQueue(acc1, acc2, 30)
       }
     }
     val second = Main.thread {
       for (i <- 0 until 100) {
-        bank addTransactionToQueue(acc2, acc1, 23)
+        bank.addTransactionToQueue(acc2, acc1, 23)
       }
     }
     first.join()
