@@ -38,36 +38,57 @@ class Transaction(val transactionsQueue: TransactionQueue,
 
   override def run: Unit = {
     def doTransaction() = this.synchronized{
-      // TODO - project task 3
-      // Extend this method to satisfy requirements.
+      // Keeping track of the success of both withdrawl
+      // and deposit
       var withdrawlSuccess = false
-      var depositSuccess = false
-
+      // Loop the allowed amount of times
       while(this.attempt != this.allowedAttemps){
+        // Increment the attempt
         this.attempt += 1
+        // If the withdrawl has yet to succeed
         if (!withdrawlSuccess){
-          val result = from.withdraw(amount)
-          result match{
+          // Try withdrawl
+          from.withdraw(amount) match{
+            // If success ensure that withdrawl is not attempted again
+            // on subsequent attempts
             case Left(()) => withdrawlSuccess = true
-            case Right(string) => depositSuccess = true
+            // If failure
+            case Right(string) => string match {
+              // If the amount was negative, increase the attempts
+              // to the allowed amount
+              case "negative" => this.attempt = this.allowedAttemps
+              // If the amount to withdraw was greater than the account
+              // balance, wait a bit, in case another parrallell transaction
+              // increases the balance of the acount enough
+              case "greater" => Thread.sleep(100)
+            }
           }
         }
-        if (!depositSuccess){
-          val result = to.deposit(amount)
-          result match{
-            case Left(()) => depositSuccess = true
-            case Right(string) => println(string)
+        // Since deposit is restricted in the same way withdrawl (fails 
+        // on negative amount), if withdrawl fails, so will deposit.
+        // Therefore, if withdrawl succeeds
+        if (withdrawlSuccess){
+          // Attempt deposit
+          to.deposit(amount) match{
+            // In case of success, increase the attempts 
+            // to the allowed amount
+            case Left(()) => this.attempt = this.allowedAttemps
+            // In case of failure, make sure the next if statement fails
+            case Right(string) => withdrawlSuccess = false
           }
         }
       }
-      if (withdrawlSuccess && depositSuccess)
+      // If the withdrawl has succeeded (meaning that the deposit succeeded as well)
+      if (withdrawlSuccess)
+        // Set the status of the transaction to SUCCESS
         this.status = TransactionStatus.SUCCESS
+      // Otherwise, the transaction failed
       else this.status = TransactionStatus.FAILED
     }
 
-    // TODO - project task 3
-    // make the code below thread safe
     if (this.status == TransactionStatus.PENDING) {
+      // Since doTransaction is synchronised, it's
+      // thread friendly
       doTransaction
       Thread.sleep(50) // you might want this to make more room for
                         // new transactions to be added to the queue

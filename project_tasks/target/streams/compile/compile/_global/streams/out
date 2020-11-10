@@ -1,7 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/danilas/Documents/Schoolwork/NTNU/ProgLang/ProgLang-Scala-project/project_tasks/src/main/scala/Transaction.scala:49:11: not found: value result[0m[0J
-[0m[[0m[31merror[0m] [0m[0m          result match{[0m[0J
-[0m[[0m[31merror[0m] [0m[0m          ^[0m[0J
-[0m[[0m[31merror[0m] [0m[0m/home/danilas/Documents/Schoolwork/NTNU/ProgLang/ProgLang-Scala-project/project_tasks/src/main/scala/Transaction.scala:55:11: not found: value result[0m[0J
-[0m[[0m[31merror[0m] [0m[0m          result match{[0m[0J
-[0m[[0m[31merror[0m] [0m[0m          ^[0m[0J
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m[0J
+[0m[[0m[31merror[0m] [0m[0m/home/danilas/Documents/Schoolwork/NTNU/ProgLang/ProgLang-Scala-project/project_tasks/src/main/scala/Transaction.scala:67:41: not found: value withdrawl[0m[0J
+[0m[[0m[31merror[0m] [0m[0m                  case Right(string) => withdrawl = false[0m[0J
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m[0J
+[0m[[0m[31merror[0m] [0m[0mone error found[0m[0J
