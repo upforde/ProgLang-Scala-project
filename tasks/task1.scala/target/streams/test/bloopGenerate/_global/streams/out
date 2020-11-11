@@ -1,0 +1,4 @@
+[debug] [task1-scala-test] Classpath dependencies List()
+[debug] [task1-scala-test] Dependencies from configurations List(task1-scala)
+[debug] Bloop wrote the configuration of project 'task1-scala-test' to 'C:\Users\aleks\Desktop\ProgLang\scala\tasks\task1.scala\.bloop\task1-scala-test.json'
+[success] Generated .bloop\task1-scala-test.json

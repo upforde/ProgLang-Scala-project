@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(scala, Some(a6a2e49f-a7cd-4df3-affb-2b6f61c11e76), Some(CommandSource(console0)))[0m[0J
+[0m[[0m[31merror[0m] [0m[0mNot a valid command: scala (similar: alias, last, eval)[0m[0J
+[0m[[0m[31merror[0m] [0m[0mNot a valid project ID: scala (similar: task1-scala)[0m[0J
+[0m[[0m[31merror[0m] [0m[0mExpected ':'[0m[0J
+[0m[[0m[31merror[0m] [0m[0mNot a valid key: scala (similar: scalaHome, scalaSource, clean)[0m[0J
+[0m[[0m[31merror[0m] [0m[0mscala[0m[0J
+[0m[[0m[31merror[0m] [0m[0m     ^[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m[0J
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m[0J

@@ -1,0 +1,4 @@
+[0m[[0m[0mdebug[0m] [0m[0m[task1-scala-build] Classpath dependencies List()[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0m[task1-scala-build] Dependencies from configurations List()[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'task1-scala-build' to 'C:\Users\aleks\Desktop\ProgLang\scala\tasks\task1.scala\project\.bloop\task1-scala-build.json'[0m[0J
+[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop\task1-scala-build.json[0m[0J
