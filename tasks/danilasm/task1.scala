@@ -2,11 +2,19 @@ object task1 {
   def main(args: Array[String]):Unit = {
     // a) Generating the array. (1 to 50) is the
     // same as doing a for loop from i = 1 until i == 50
-    val array = (1 to 50).toArray 
+    array = createArray(50)
 
     println(sum(array))
     println(recSum(array))
-    println(nthFib(10000))
+    println(fib(10000))
+  }
+
+  // Function that creates an array of size n filled with ints 
+  // increasing from 1 to n
+  def createArray(n: Int):Array[Int] = {
+    val array = new Array[Int](n)
+    for (a <- 1 to n) array(a-1) = a
+    array
   }
 
   // b) fucntion that sums an array using a for loop
@@ -23,13 +31,10 @@ object task1 {
   }
 
   // d) Function that returns the nth number of the Fibonacci sequence.
-  def nthFib(n: BigInt): BigInt = {
-    val Zero = BigInt(0)                                                
-    def fib_tail(n: BigInt, a: BigInt, b: BigInt): BigInt = n match {
-      case Zero => a
-      case _ => fib_tail(n - 1, b, a + b)
-    }
-    return fib_tail(n, 0 , 1)
+  def fib (n : BigInt) : BigInt =
+  {
+      if (n < 3) 1 else
+      Fib(n - 1) + Fib(n - 2)
   }
 
   // d) The difference between Int and BigInt 
