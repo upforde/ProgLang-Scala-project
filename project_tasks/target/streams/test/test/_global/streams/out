@@ -1,5 +1,5 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AccountTests, org.scalatest.tools.Framework$$anon$1@6d399c0f, false, [SuiteSelector])[0m[0J
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AccountTransferTests, org.scalatest.tools.Framework$$anon$1@6d399c0f, false, [SuiteSelector])[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AccountTests, org.scalatest.tools.Framework$$anon$1@3e7f9fa, false, [SuiteSelector])[0m[0J
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(AccountTransferTests, org.scalatest.tools.Framework$$anon$1@3e7f9fa, false, [SuiteSelector])[0m[0J
 [0m[[0m[0minfo[0m] [0m[0m[32mAccountTests:[0m[0m[0J
 [0m[[0m[0minfo[0m] [0m[0m[32m- Test 01: Valid account withdrawal[0m[0m[0J
 [0m[[0m[0minfo[0m] [0m[0m[32m- Test 02: Invalid account withdrawal should throw exception[0m[0m[0J
@@ -14,7 +14,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Test 10: Correct balance amounts after several transfers[0m[0m[0J
 [0m[[0m[0minfo[0m] [0m[0m[32m- Test 11: Failed transactions should retry and potentially succeed with multiple allowed attempts[0m[0m[0J
 [0m[[0m[0minfo[0m] [0m[0m[32m- Test 12: Some transactions should be stopped with only one allowed attempt[0m[0m[0J
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 49 seconds, 310 milliseconds.[0m[0m[0J
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 56 seconds, 95 milliseconds.[0m[0m[0J
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 12[0m[0m[0J
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m[0J
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 12, failed 0, canceled 0, ignored 0, pending 0[0m[0m[0J
